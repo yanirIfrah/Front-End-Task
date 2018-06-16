@@ -1,0 +1,60 @@
+<section class="less mt-5 ">
+  <h2 class="h1-responsive font-weight-bold text-center ml-5 mr-5">Less : Leaner Style Sheets</h2>
+  <p id="lessContent" class="grey-text text-center w-responsive  mb-5">Less (which stands for Leaner Style Sheets) is a backwards-compatible language extension for CSS. This is the official
+    documentation for Less, the language and Less.js, the JavaScript tool that converts your Less styles to CSS styles.</p>
+  <div class="row">
+    <div class="col-lg-5 mb-lg-0 mb-5">
+      <img src="../../../assets/images/2.png" alt="Less" class="img-fluid rounded z-depth-1">
+    </div>
+    <div class="col-lg-7">
+      <div class="row mb-3">
+        <div class="col-md-1 col-2">
+          <i class="fa fa-code fa-2x cyan-text"></i>
+        </div>
+        <div class="col-md-11 col-10">
+          <h5 class="font-weight-bold mb-3">@base: #f938ad</h5>
+          <p class="grey-text">Sets a base SCOPE variable and gives it a certain color.</p>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-1 col-2">
+          <i class="fa fa-code fa-2x red-text"></i>
+        </div>
+        <div class="col-md-11 col-10">
+          <h5 class="font-weight-bold mb-3">box-shadow(@style, @c) when (iscolor(@c)) box-shadow: @style @c; -webkit-box-shadow: @style @c; -moz-box-shadow:
+            @style @c; }
+          </h5>
+          <p class="grey-text">The LESS function that called when variable @C is color. The @style is the OFFSET for the RULE of BOX-SHADOW It
+            also handles the Mozilla browser.</p>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-1 col-2">
+          <i class="fa fa-code fa-2x deep-purple-text"></i>
+        </div>
+        <div class="col-md-11 col-10">
+          <h5 class="font-weight-bold mb-3">.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) .box-shadow(@style, rgba(0, 0, 0, @alpha)); }
+          </h5>
+          <p class="grey-text mb-0">A function that is used when @alpha is a number. For the RULL of BOX-SHADOW, it gets STYLE.
+            <br>
+            <strong style="color:green">For example:</strong>
+            <br> 8PX 8PX 8PX 8PX and the variable @ALPHA represents the amount of OPACITY that will be the color of the BOX-SHADOW.</p>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-1 col-2">
+          <i class="fa fa-code fa-2x deep-purple-text"></i>
+        </div>
+        <div class="col-md-11 col-10">
+          <h5 class="font-weight-bold mb-3">.box color: saturate(@base, 5%); border-color: lighten(@base, 30%); div .box-shadow(0 0 5px, 30%) }
+          </h5>
+          <p class="grey-text mb-0">For the element class
+            <strong>.box</strong>, there is the following style: Its color changes with a 5% strurate function - a sharpness and
+            saturation of color. In addition, this element has a child element of its DIV-BOX-SHADOW type with color and
+            transparency of 30%</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="my-5">
+</section>

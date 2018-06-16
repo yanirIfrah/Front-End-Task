@@ -1,0 +1,81 @@
+
+#accordion {
+    width: 450px;
+}
+.intro {
+    height: 450px;
+    width: 450px;
+    background-image: url(http://nihongo-e-na.com/archives/006/201206/large-4fe806d39a5fc.png);
+    background-size: cover;
+}
+.container{
+    width: 100%;
+}
+.btn{
+    color: rgb(212, 212, 212);
+    &:hover{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+}
+.card-header{
+    background-color: rgb(114, 114, 114);
+    &:hover{
+        background-color: rgb(131, 131, 131);
+    }
+}
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+
+html, body {
+	height: 100%;
+	margin: 0;
+}
+strong{
+    text-transform: uppercase;
+}
+
+body {
+	background: #fffdf5;
+	color: #3f3f5a;
+	display: flex;
+	flex-direction: column;
+}
+
+blockquote {
+    font-family: 'Special Elite', cursive;
+
+	font-weight: 100;
+	font-size: 1.5rem;
+	max-width: 600px;
+	line-height: 1.4;
+	position: relative;
+	margin: 0;
+	padding: .5rem;
+}
+
+blockquote:before,
+blockquote:after {
+	position: absolute;
+	color: #646464;
+	font-size: 4rem;
+	width: 4rem;
+	height: 4rem;
+}
+
+blockquote:before {
+	content: '“';
+	left: -2rem;
+	top: -2rem;
+}
+
+blockquote:after {
+	content: '”';
+	right: -5rem;
+}
+
+cite {
+    color: rgb(0, 54, 116);
+	line-height: 3;
+	text-align: left;
+}
+

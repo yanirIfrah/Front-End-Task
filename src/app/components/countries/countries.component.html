@@ -1,0 +1,41 @@
+
+<app-quote></app-quote>
+<hr class="hr-style mb-5">
+<div class="wrapper">
+  <div id="effect" *ngFor="let customer of CountreisArray">
+    <div class="hovereffect">
+      <img class="img-responsive" src="../../../assets/images/3.jpg" alt="Countries">
+      <div class="overlay">
+        <h2>
+          <i class="fa fa-globe"> {{customer.name}}</i>
+        </h2>
+        <i class="citiesList">Cities List :</i>
+        <br>
+        <i class="city" *ngFor="let city of customer.cities">{{city.name}} | </i>
+      </div>
+    </div>
+  </div>
+</div>
+<hr class="hr-style mb-5">
+<div class="wrapper mt-5">
+  <div id="effect" *ngFor="let customer of Customers">
+    <div class="hovereffect">
+      <img class="img-responsive" src="../../../assets/images/2.jpg" alt="Countries">
+      <div class="overlay">
+        <h2>
+          <i class="fa fa-globe"> {{customer.Country}}</i>
+        </h2>
+        <i class="city">Contact Name : {{customer.ContactName}}</i>
+        <br>
+        <i class="city">City: {{customer.City}}</i>
+        <br>
+        <span class="fa fa-child"> Id: {{customer.Id}}</span>
+        <i class="fa fa-tags ml-3"> Postal: {{customer.PostalCode}}</i>
+        <i class="fa fa-phone ml-3"> {{customer.Phone}}</i>
+        <br>
+        <a class="info" href="#">watch</a>
+        <a class="info" href="#">read more</a>
+      </div>
+    </div>
+  </div>
+</div>

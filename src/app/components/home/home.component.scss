@@ -1,0 +1,114 @@
+.intro {
+    height: 100%;
+    width: 100%;
+    background: url(../../../assets/images/4.jpg) no-repeat center fixed;
+    display: table;
+    margin: 0;
+}
+.intro .inner {
+    vertical-align: middle;
+    width: 100%;
+    max-width: none;
+    margin-top: 15%;
+    margin-bottom: 25%;
+}
+.content {
+    max-width: 500%;
+    margin: 0 auto;
+    text-align: center;
+}
+.content h1 {
+    text-transform: uppercase;
+    font-family: 'Relway', sans-serif;
+    color: #fff;
+    font-size: 70px;
+}
+
+.btn {
+    border-radius: 9px;
+    font-family: 'Oswald', sans-serif;
+    color: #036Ab1;
+    font-size: 100%;
+    padding: 10px 20px;
+    border: solid  1px;
+    text-decoration: none;
+}
+.btn:hover {
+    color: #fff;
+    border: solid rgb(255, 255, 255) 1px;
+
+    font-family: sans-serif #036Ab1;
+}
+//**********************************************
+//CONFIG
+$time: 250ms;
+$number: 3;
+$ease: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+$move: 1em;
+$color: rgb(255, 255, 255);
+$font: 'Roboto Condensed', sans-serif;
+
+html{
+	text-align: center;
+}
+a{
+	cursor: pointer;
+	font-family: $font;
+	font-weight: 900;
+	user-select: none;
+	color: $color;
+	font-size: 0;
+	transform: translate3d(0,0,0);
+	filter: blur(0);
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	span{
+        color: rgb(165, 165, 165);
+        &:hover{
+            color: white;
+        }
+		font-size: 40px;
+		margin: 0;
+		padding: 0;
+		display: inline-block;
+		position: relative;
+		transition: transform $ease $time;
+		padding: 0 0.1em;
+		
+		@for $i from 0 through $number{
+			&:nth-child(#{$i}n){ transition-delay: $time*$i/$number;}
+			&:nth-child(#{$i}n):after{ transition-delay: $time*$i/$number;}
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: -1%;
+			width: 102%;
+			height: $move;
+			background: $color;
+			transform-origin: top center;
+			transform: scaley(0.1);
+			transition: transform $ease $time;
+		}
+	}
+	&:hover{
+		span{
+			transform: translateY(-$move/2);
+			&:after{ transform: scaleY(1);}
+		}
+	}
+	&:active{
+		span{
+			transform: translateY(0);	
+			transition: transform $ease $time/2;
+			transition-delay: 0 !important;
+			&:after{
+				transform: scaleY(0.5);
+				transition: transform $ease $time/2;
+				transition-delay: 0 !important;
+			}
+		}
+	}
+	
+}
